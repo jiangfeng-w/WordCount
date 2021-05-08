@@ -3,17 +3,17 @@
 int *getcharnum(char *filename,int *totalnum);
 int main(){
 	char filename[30];
-	int totalnum[3]={1,1,1};//ĞĞ¡¢×Ö·û¡¢µ¥´Ê
+	int totalnum[3]={1,1,1};
 	char control[5];
 	char a[5]="-c";
 	scanf("%s",control);
-	printf("Input file name:");
+	printf("Input File Name:");
 	scanf("%s",filename);
 	if(getcharnum(filename,totalnum)){
 		if(strcmp(control,a)==0)
-			printf("×Ö·ûÊı%d",totalnum[1]);
+			printf("å­—ç¬¦æ•°:%d",totalnum[1]);
 		else
-			printf("µ¥´ÊÊı%d",totalnum[2]);
+			printf("å•è¯æ•°:%d",totalnum[2]);
 	}
 	else
 		printf("Error!");
@@ -21,11 +21,11 @@ int main(){
 } 
 int *getcharnum(char *filename,int *totalnum){
 	FILE *fp;
-	char buffer[1003];//´æ´¢¶Áµ½µÄÄÚÈİ 
-	int bufferlen;//´æµÄÊµ¼Ê³¤¶È
+	char buffer[1003];
+	int bufferlen;
 	int i;
 	char c;
-	int islastblank=0;//ÅĞ¶ÏÉÏÒ»¸ö×Ö·ûÊÇ·ñÎª¿Õ¸ñ
+	int islastblank=0;
 	int charnum=0;
 	int wordnum=0;
 	if((fp=fopen(filename,"rb"))==NULL){
@@ -53,4 +53,3 @@ int *getcharnum(char *filename,int *totalnum){
 	}
 	return totalnum; 
 }
-
