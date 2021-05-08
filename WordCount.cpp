@@ -6,6 +6,7 @@ int main(){
 	int totalnum[3]={1,1,1};
 	char control[5];
 	char a[5]="-c";
+	printf("Input Command:");
 	scanf("%s",control);
 	printf("Input File Name:");
 	scanf("%s",filename);
